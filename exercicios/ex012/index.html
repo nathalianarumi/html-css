@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserindo vídeos em HTML5</title>
+</head>
+<body>
+    <h1>Hospedando vídeos com arquivos do próprio servidor.</h1>
+    <p>Vejamos algunns exemplos</p>
+    <video poster="imagens/thumbnail.jpg" width="600" controls>
+        <source src="midia/meu-video.m4v" type="video/m4v">
+        <source src="midia/meu-video.webm" type="video/webm">
+        <source src="midia/meu-video.mp4" type="video/mp4">
+        <p>Desculpe, seu navegador não é compatível para reprodução desse vídeo.</p>
+    </video>
+    
+    <h1>Hospedando vídeos do YouTube.</h1>
+    <p>Utilizamos desse caso para não precisarmos consumir do nosso próprio servidor, mas sim de um externo especializado em vídeos.</p>
+    <iframe width="600" height="315" src="https://www.youtube.com/embed/uoxY6fX2sqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   
+    <h1>Hospedando vpideos do Vimeo.</h1>
+    <p>Utilizamos serviços de outros servidores como Vimeo para casos específicos para conteúdos onde esses vídeos não poderão ser públicos, como os de uma escola online. Ou assinantes de algum serviço ou conteúdo.</p>
+    <iframe src="https://player.vimeo.com/video/424114801?h=6d65b648a3&loop=1&color=ff9933&portrait=0" width="600" height="265" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>

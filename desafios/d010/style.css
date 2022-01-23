@@ -1,0 +1,231 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url('pacote-projeto-d010/fontes/idroid.otf') format('OpenType');
+}
+
+:root {
+    --cor0: #EBE5C5;
+    --cor1: #83E1AD;
+    --cor2: #3DDC84;
+    --cor3: #2FA866;
+    --cor4: #1A5C37;
+    --cor5: #063D1E;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+}
+
+    /* Root vai definir configurações gerais como variáveis de paleta de cores e fontes que podem ser alterados diretamente nos valores atribuidos após o -- em vez de mudar um por um no código a baixo. */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+    /* Vai "juntar" todo o conteúdo pertinho para configurarmos todos os delimites visuais de espaçaento, etc. Sem os valores padrões de navegador. */ 
+
+body {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+    text-shadow: 2px 2px 6px #000000;
+}
+
+header > h1 {
+    color: white;
+    font-size: 3em;
+    font-weight: normal;
+    font-family: var(--fonte-destaque);
+    margin-bottom: 20px;
+}
+
+header > p {
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    max-width: 600px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+    /* No cabeçalho, definir os espaçamentos, centralização tomando cuidado com os valores para se tornar mais responsivo. Com os atributos de max/min-width e height, padding e margin. */
+
+nav {
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.404);
+}
+
+nav > a {
+    color: var(--cor1);
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 10px;
+    transition-duration: .5s;
+    /* Duração do "fade" conforme passamos o cursor sobre o link. */
+}
+
+nav > a:hover {
+    color: var(--cor5);
+    background-color: var(--cor3);
+}
+
+    /* Nav configura a região de links de navegação dentro do site, importante se atentar a parte visual e que se torne bonito, clean and smooth. Variável para cada projeto. */
+
+main {
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.363);
+}
+
+    /* Os min-width e max width definem o bloco que contém o conteúdo para que não ultrapasse um tamanho de caixa maior ou menor que os valores determinados para melhor visualização e leitura independentemente do dispositivo que estiver sendo acessado. 
+    
+    O margin: auto, configura sempre o conteúdo no meio da página automaticamente independente de qual tamanho esteja. */
+
+main h1 {
+    font-family: var(--fonte-android);
+    color: var(--cor5);
+    font-size: 1.8em;
+    font-weight: normal;
+}
+
+main p {
+    margin: 15px 0px;
+    font-size: 1.1em;
+    line-height: 2em;
+    text-indent: 30px;
+    text-align: justify;
+}
+
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+main a {
+    color: var(--cor5);
+    background-color: var(--cor1);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 2px 6px;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor4);
+}
+
+a.externo::after {
+    content: '\00A0\1F517';
+}
+
+    /* \00A0\ simboliza um espaco em branco e o 1F517 simboliza o código de um emoji U+1F517 pego no emojipedia.  */
+
+main h2 {
+    font-family: var(--fonte-android);
+    font-size: 1.3em;
+    color: var(--cor4);
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px;
+}
+
+main img {
+    width: 100%;
+}
+
+main img.pequeno {
+    display: block;
+    max-width: 350px;
+    margin: auto;
+}
+
+    /* O max-width da imagem garante a qualidade do mesmo e mantém o arquivo do mesmo tamanho de visualização para que não fique pixelado e desfocado ao abrir demais. */
+
+div.video {
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56.5%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+    /* Envelopar o iframe de incorporação de vídeo com uma div.
+
+     -20px de margin representando as laterais com 10px do article e 10 do main que vamos "tirar" para colar o background color nas laterais.
+
+     30px de margin na parte de baixo do vídeo e 0px em cima
+
+     position: relative e absolute
+    */
+
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
+}
+
+aside > h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+     /* Os valores negativos transformaram/mesclaram o h3 com o aside em um único bloco, deixando mais harmônico.*/
+
+aside > ul {
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    columns: 2;
+}
+
+    /* O list-style-type não é compatível para todos os navegadores, porém serve para substituir o ponto padrão das marcações de lista por um "check" pego no EmojiPedia usando o código U+. */
+
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightblue;
+            margin: 0px;
+        }
+
+        header {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.308);
+            border-radius: 10px 10px 10px 0px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        nav {
+            background-color: rgb(185, 234, 250);
+            padding: 3px;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.308);
+        }
+        
+        nav > a  {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav > a:hover {
+            text-decoration: underline;
+            color: rgb(34, 42, 44);
+        }
+
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px; 
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.308);
+            border-radius: 10px 10px 10px 0px;
+        }
+
+        aside {
+            text-align: right;
+        }
+
+
+        footer {
+            background-color: rgb(79, 96, 102);
+            color: white;
+            text-align: center;
+            padding: 4px;
+        }
+
+        footer > p {
+            margin: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Testando as Grouping Tags</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+            Tudo sobre: <em><q>O quê eu não sei da minha vida</q></em>
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>O quê eu estou fazendo da minha vida?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium eius possimus voluptatum distinctio consectetur labore beatae excepturi iusto tempore numquam earum dolore molestiae, optio repudiandae ducimus dolores quo ab ullam?</p>
+                <aside>
+                    <p>Artigo escrito por Ninguém</p>
+                </aside>
+            </article>
+            <article>
+                <h2>Relato sobre nós</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo atque necessitatibus optio cum voluptatibus harum libero deleniti sapiente cumque odio rem ad esse, autem recusandae iusto repellendus dolores ducimus laudantium?
+                </p>
+                <aside>
+                    <p>
+                        <img src="https://i.redd.it/q6acpkhjj8501.jpg" alt="Meme">
+                    </p>
+                </aside>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Naru.</p>
+    </footer>
+</body>
+</html>
